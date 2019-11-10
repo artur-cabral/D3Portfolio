@@ -1,37 +1,24 @@
-## Welcome to GitHub Pages
+## Projects
 
-You can use the [editor on GitHub](https://github.com/artur-cabral/D3Projects/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+These projects were developed during my MSCS degree at _Georgia Institute of Technology_ for my specialization in Visual Data Analytics.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-[Test Link to HW4](https://artur-cabral.github.io/D3Projects/HW4/index.html)
+[Lab0](https://artur-cabral.github.io/D3Projects/Lab0/index.html)
+[Lab1](https://artur-cabral.github.io/D3Projects/Lab1/index.html)
+[Lab2](https://artur-cabral.github.io/D3Projects/Lab2/index.html)
+[Lab3](https://artur-cabral.github.io/D3Projects/Lab3/index.html)
+[Lab4](https://artur-cabral.github.io/D3Projects/Lab4/index.html)
+[Lab5](https://artur-cabral.github.io/D3Projects/Lab5/index.html)
+[Lab6](https://artur-cabral.github.io/D3Projects/Lab6/index.html)
+[Lab7](https://artur-cabral.github.io/D3Projects/Lab7/index.html)
+[Lab8b](https://artur-cabral.github.io/D3Projects/Lab8b/index.html)
+[HW4](https://artur-cabral.github.io/D3Projects/HW4/index.html)
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/artur-cabral/D3Projects/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Artur Bessa Cabral
+[mailto](mailto:artur-cabral@gatech.edu)
+[LinkedIn](https://www.linkedin.com/in/artur-cabral/)
+
