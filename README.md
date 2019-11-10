@@ -15,9 +15,9 @@ These projects were developed during my MSCS degree at _Georgia Institute of Tec
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  blah |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
+|<img width="1604" alt="Website Popularity Linked Graph" src="./images/linkedgraph.png">  |  <img width="1604" alt="Geoviz Area Density" src="./images/lab8b.png">|<img width="1604" alt="Car Info Trellis Interactive Scatterplot" src="./images/lab7.png">|
+|<img width="1604" alt="Car Info Interactive Scatterplot" src="./images/lab6.png">  |  <img width="1604" alt="Letter Frequency Horizontal Bar Chart" src="./images/lab5.png">|<img width="1604" alt="Stock Price Time-Series Trellis" src="lab4.png">|
+|<img width="1604" alt="Exoplanets Bubble Scatterplot" src="./images/lab3.png">  |  <img width="1604" alt="Interactive MLB Scatterplot" src=".images/lab2.png">|<img width="1604" alt="Game of Thrones Character Directory" src=".images/lab1.png">|
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
