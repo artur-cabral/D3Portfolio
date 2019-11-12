@@ -14,6 +14,12 @@ These projects were developed during my MSCS degree at _Georgia Institute of Tec
 [Network Graph](https://artur-cabral.github.io/D3Portfolio/lab8a/index.html)<br>
 [Website Popularity Linked Graph](https://artur-cabral.github.io/D3Portfolio/HW4/index.html)<br><br>
 
+### In progress...
+
+NYC Parking Violations Scrollitelling (CS7450)
+Anti-Procratination Browser Extension (CS6456)
+US Airports Flight Delays (ISyE6414)
+
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="Website Popularity Linked Graph" src="./images/linkedgraph.png"> [Website Popularity Linked Graph](https://artur-cabral.github.io/D3Portfolio/HW4/index.html)  | <img width="1604" alt="Geoviz Area Density" src="./images/lab8b.png"> [Geoviz Area Density](https://artur-cabral.github.io/D3Portfolio/Lab8b/index.html) |<img width="1604" alt="Car Info Trellis Interactive Scatterplot" src="./images/lab7.png"> [Car Info Trellis Interactive Scatterplot](https://artur-cabral.github.io/D3Portfolio/Lab7/index.html) |
