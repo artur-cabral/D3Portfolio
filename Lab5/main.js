@@ -1,5 +1,5 @@
 // Global function called when select element is changed
-function onCategoryChanged() {
+function onCategoryChanged(value) {
     var select = d3.select('#categorySelect').node();
     // Get current value of select element
     var category = select.options[select.selectedIndex].value;
@@ -7,8 +7,7 @@ function onCategoryChanged() {
     updateChart(category);
 }
 
-// recall that when data is loaded into memory, numbers are loaded as strings
-// this function helps convert numbers into string during data preprocessing
+// Load data and use this function to process each row
 function dataPreprocessor(row) {
     return {
         letter: row.letter,
@@ -16,13 +15,23 @@ function dataPreprocessor(row) {
     };
 }
 
+d3.selectAll('.filter')
+    .on('click', function(){
+        // Remove the currently selected classname from that element
+        d3.select('.filter.selected').classed('selected', false);
+        var clicked = d3.select(this);
+        // Add the selected classname to element that was just clicked
+        clicked.classed('selected', true);
+        updateChart(clicked.attr('value'));
+    });
+
 var svg = d3.select('svg');
 
 // Get layout parameters
 var svgWidth = +svg.attr('width');
 var svgHeight = +svg.attr('height');
 
-var padding = {t: 60, r: 40, b: 30, l: 40};
+var padding = {t: 90, r: 40, b: 30, l: 60};
 
 // Compute chart dimensions
 var chartWidth = svgWidth - padding.l - padding.r;
@@ -44,46 +53,43 @@ var lettersMap = {
 };
 
 d3.csv('letter_freq.csv', dataPreprocessor).then(function(dataset) {
-    // Create global variables here and intialize the chart
-    letters = dataset;
-    
-    // Set up the variables and functions that we need for our bar chart
-    var maxFreq = d3.max(dataset, function(d){
-        return d.frequency;
+        letters = dataset;
+
+        // Set up the variables and functions that we need for our bar chart
+        var maxFreq = d3.max(dataset, function(d){
+            return d.frequency;
+        });
+
+        xScale = d3.scaleLinear()
+            .domain([0, maxFreq])
+            .range([0, chartWidth]);
+
+        svg.append('text')
+            .attr('class', 'axis-label')
+            .attr('transform', 'translate('+[svgWidth / 2, 60]+')')
+            .text('Letter Frequency (%)');
+
+        formatPercent = function(d) {
+            return Math.round(d * 10000) / 100 + '%';
+        }
+
+        // Add axes here, if you put them in the updateChart method, multiple axes will be added
+        // We'll go over how to update axes with interaction in the next labs
+        svg.append('g')
+            .attr('class', 'x axis')
+            .attr('transform', 'translate('+[padding.l, padding.t]+')')
+            .call(d3.axisTop(xScale).ticks(6).tickFormat(formatPercent));
+
+        svg.append('g')
+            .attr('class', 'x axis')
+            .attr('transform', 'translate('+[padding.l, svgHeight - padding.b]+')')
+            .call(d3.axisBottom(xScale).ticks(6).tickFormat(formatPercent));
+
+        updateChart('all-letters');
     });
-
-    xScale = d3.scaleLinear()
-        .domain([0, maxFreq])
-        .range([0, chartWidth]);
-
-    svg.append('text')
-        .attr('class', 'axis-label')
-        .attr('transform', 'translate('+[svgWidth / 2, 30]+')')
-        .text('Letter Frequency (%)');
-
-    var formatPercent = function(d) {
-        return d * 100 + '%';
-    }
-
-    // Add axes here, if you put them in the updateChart method, multiple axes will be added
-    // We'll go over how to update axes with interaction in the next labs
-    svg.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', 'translate('+[padding.l, padding.t]+')')
-        .call(d3.axisTop(xScale).ticks(6).tickFormat(formatPercent));
-
-    svg.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', 'translate('+[padding.l, svgHeight - padding.b]+')')
-        .call(d3.axisBottom(xScale).ticks(6).tickFormat(formatPercent));
-
-    // Update the chart for all letters to initialize
-    updateChart('all-letters');
-});
 
 
 function updateChart(filterKey) {
-    // Create a filtered array of letters based on the filterKey
     var filteredLetters = letters.filter(function(d){
         return lettersMap[filterKey].indexOf(d.letter) >= 0;
     });
@@ -97,17 +103,35 @@ function updateChart(filterKey) {
 
     // Create the enter selection
     // Here we will append new groups
-    var barsEnter = bars.enter() // Remember enter makes a placeholder for new elements
+    var barsEnter = bars.enter()
         .append('g')
-        .attr('class', 'bar');
+        .attr('class', 'bar')
+        .on('mouseover', function(d) {
+            // Use this to select the hovered element
+            var hovered = d3.select(this);
+            // add hovered class to style the group
+            hovered.classed('hovered', true);
+            // add a new text value element to the group
+            hovered.append('text')
+                .attr('class', 'value')
+                .attr('x', xScale(d.frequency) + 10)
+                .attr('dy', '0.7em')
+                .text(formatPercent(d.frequency));
+        })
+        .on('mouseout', function(d) {
+            // Clean up the actions that happened in mouseover
+            var hovered = d3.select(this);
+            hovered.classed('hovered', false);
+            hovered.select('text.value').remove();
+        });
 
     // Create an UPDATE + ENTER selection
     // Selects all data-bound elements that are in SVG or just added to SVG
     bars.merge(barsEnter)
+        .transition()
         .attr('transform', function(d,i){
             return 'translate('+[0, i * barBand + 4]+')'; // Update position based on index
         });
-
 
     // Add rectangles to the ENTER selection
     // This will add a rectangle to each new group element
@@ -130,5 +154,4 @@ function updateChart(filterKey) {
     // Using a key-function in the data() method is crucial to a proper EXIT
     bars.exit().remove();
 }
-
 // Remember code outside of the data callback function will run before the data loads
