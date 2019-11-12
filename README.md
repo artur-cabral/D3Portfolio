@@ -11,6 +11,7 @@ These projects were developed during my MSCS degree at _Georgia Institute of Tec
 [Car Info Interactive Scatterplot](https://artur-cabral.github.io/D3Portfolio/Lab6/index.html)<br>
 [Car Info Trellis Interactive Scatterplot](https://artur-cabral.github.io/D3Portfolio/Lab7/index.html)<br>
 [Geoviz Area Density](https://artur-cabral.github.io/D3Portfolio/Lab8b/index.html)<br>
+[Network Graph](https://artur-cabral.github.io/D3Portfolio/lab8a/index.html)<br>
 [Website Popularity Linked Graph](https://artur-cabral.github.io/D3Portfolio/HW4/index.html)<br><br>
 
 | | | |
