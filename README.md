@@ -16,9 +16,9 @@ These projects were developed during my MSCS degree at _Georgia Institute of Tec
 
 ### In progress...
 
-NYC Parking Violations Scrollitelling (CS7450)
-Anti-Procratination Browser Extension (CS6456)
-US Airports Flight Delays (ISyE6414)
+NYC Parking Violations Scrollitelling (CS7450)<br>
+Anti-Procratination Browser Extension (CS6456)<br>
+US Airports Flight Delays (ISyE6414)<br>
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
